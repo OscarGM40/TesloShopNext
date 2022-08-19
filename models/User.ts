@@ -1,0 +1,28 @@
+import mongoose, { Schema, model, Model } from 'mongoose';
+import { IUser } from '../interfaces';
+
+const userSchema = new Schema(
+  {
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    role: {
+      type: String,
+      enum: {
+        values: ['admin', 'client','superuser','CEO'],
+        message: '{VALUE} no es un rol válido',
+        default: 'client',
+        required: true,
+      },
+    },
+  },
+  {
+    timestamps: true,
+    versionKey: false,
+  }
+);
+
+// ojo con la sintaxis,será mongoose.models.Product,igual que el primer arg de model('ESTE',schema)
+const UserModel: Model<IUser> =
+  mongoose.models.User || model('User', userSchema);
+export default UserModel;

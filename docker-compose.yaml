@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+    teslodb:
+      image: mongo:5.0.0
+      container_name: teslo-database
+      ports:
+        - '27021:27017'
+      environment:
+        - MONGO_INITDB_DATABASE=teslodb
+        - MONGO_INITDB_ROOT_USERNAME=root
+        - MONGO_INITDB_ROOT_PASSWORD=root
+      volumes:
+        - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+        - /mongo:/data/db # ojo con exited(14) que es por wrong permissions en el SSD(usar volumen en el SO)
