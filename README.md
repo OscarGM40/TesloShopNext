@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+</p>
+
 # Next.js Teslo E-Commerce App
 Para ejecutar la app localmente se necesita la base de datos(de momento es un contenedor Docker con la imagen de MongoDB v5). Para ello se debe ejecutar el siguiente comando(dejo la db en el 27021):
 ```
