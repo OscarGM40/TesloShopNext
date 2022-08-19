@@ -71,7 +71,7 @@ const SummaryPage = () => {
                 </NextLink>
               </Box>
 
-              <Typography>{`${shippingAddress?.firstName} ${shippingAddress?.lastName}}`}</Typography>
+              <Typography>{`${shippingAddress?.firstName} ${shippingAddress?.lastName}`}</Typography>
               <Typography>
                 {shippingAddress?.city} {shippingAddress?.zip}
               </Typography>
