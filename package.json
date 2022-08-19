@@ -2,16 +2,14 @@
   "name": "teslo-shop",
   "version": "0.1.0",
   "type": "module",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint . --fix",
-    "format": "prettier . --write",
-    "test": "jest",
-    "test:ci": "jest --coverage --silent --ci"
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
